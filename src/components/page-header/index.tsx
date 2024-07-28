@@ -1,7 +1,9 @@
 import classNames from "classnames/bind";
 import { FC, ReactNode } from "react";
+import { FormattedDate, FormattedMessage } from "react-intl";
 
 import AltLogoIcon from "@/icons/alt-logo.svg";
+import { CONFERENCE_DATE } from "@/shared/conference-date";
 
 import styles from "./styles.module.css";
 
@@ -17,7 +19,21 @@ export const PageHeader: FC<PageHeaderProps> = ({ title }) => (
 
         <div className={cx("header__subtitle")}>
             <AltLogoIcon />
-            <h2 className={cx("header__subtitle-text")}>I&L–2024</h2>
+            <h2 className={cx("header__subtitle-text")}>
+                <FormattedMessage
+                    id="pageHeader.subtitle"
+                    defaultMessage="I&L–{year}"
+                    values={{
+                        year: (
+                            <FormattedDate
+                                value={CONFERENCE_DATE}
+                                year="numeric"
+                                numberingSystem="latn"
+                            />
+                        ),
+                    }}
+                />
+            </h2>
         </div>
     </header>
 );

@@ -5,6 +5,7 @@
         "formatjs/enforce-default-message": "error",
         "formatjs/enforce-placeholders": "error",
         "formatjs/enforce-id": "error",
-        "formatjs/no-useless-message": "error"
+        "formatjs/no-useless-message": "error",
+        "formatjs/no-literal-string-in-jsx": "error"
     }
 }

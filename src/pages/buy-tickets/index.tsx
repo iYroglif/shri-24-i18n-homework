@@ -2,11 +2,13 @@ import classNames from "classnames/bind";
 import { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
+import { FormattedMessage, FormattedNumber, useIntl } from "react-intl";
 
 import { Button } from "@/components/button";
 import { HorizontalDivider } from "@/components/horizontal-divider";
 import { PageHeader } from "@/components/page-header";
 import { Ticket } from "@/components/ticket";
+import { CONFERENCE_DATE } from "@/shared/conference-date";
 
 import styles from "./styles.module.css";
 
@@ -15,32 +17,75 @@ const cx = classNames.bind(styles);
 export const BuyTicketsPage: NextPage = () => {
     const [selectedPrice, setSelectedPrice] = useState(2500);
     const [ticketCount, setTicketCount] = useState(1);
+    const intl = useIntl();
 
     const totalPrice = selectedPrice * ticketCount;
 
     return (
         <>
             <Head>
-                <title>Купить билеты - I&L–2024</title>
+                <title>
+                    {intl.formatMessage<string>(
+                        {
+                            id: "buyTicketsPage.title",
+                            defaultMessage: "Купить билеты - I&L–{year}",
+                        },
+                        {
+                            year: intl.formatDate(CONFERENCE_DATE, {
+                                year: "numeric",
+                                numberingSystem: "latn",
+                            }),
+                        }
+                    )}
+                </title>
             </Head>
 
-            <PageHeader title="Купить билеты" />
+            <PageHeader
+                title={
+                    <FormattedMessage
+                        id="buyTicketsPage.buyTickets"
+                        defaultMessage="Купить билеты"
+                    />
+                }
+            />
 
             <form className={cx("form")}>
                 <HorizontalDivider />
 
                 <fieldset className={cx("form__tickets")}>
-                    <div className={cx("form__label")}>Выберите тип билета</div>
+                    <div className={cx("form__label")}>
+                        <FormattedMessage
+                            id="buyTicketsPage.chooseTicketType"
+                            defaultMessage="Выберите тип билета"
+                        />
+                    </div>
                     <div className={cx("form__tickets-wrapper")}>
                         <Ticket
                             id="ticket-default"
                             title={
-                                <>
-                                    Входной билет <br /> 2 500,00 ₽
-                                </>
+                                <FormattedMessage
+                                    id="buyTicketsPage.defaultTicket"
+                                    defaultMessage="Входной билет {br} {price}"
+                                    values={{
+                                        br: <br />,
+                                        price: (
+                                            <FormattedNumber
+                                                value={2500}
+                                                style="currency"
+                                                currency="RUB"
+                                                numberingSystem="latn"
+                                            />
+                                        ),
+                                    }}
+                                />
                             }
                             price={2500}
-                            description="Простой входной билет предоставляет доступ на мероприятие и является вашим пропуском на конференцию"
+                            description={
+                                <FormattedMessage
+                                    id="buyTicketsPage.defaultTicketDescription"
+                                    defaultMessage="Простой входной билет предоставляет доступ на мероприятие и является вашим пропуском на конференцию"
+                                />
+                            }
                             defaultChecked
                             onChange={setSelectedPrice}
                         />
@@ -49,12 +94,29 @@ export const BuyTicketsPage: NextPage = () => {
                             vip
                             id="ticket-vip"
                             title={
-                                <>
-                                    VIP посещение <br /> 15 000,00 ₽
-                                </>
+                                <FormattedMessage
+                                    id="buyTicketsPage.vipTicket"
+                                    defaultMessage="VIP посещение {br} {price}"
+                                    values={{
+                                        br: <br />,
+                                        price: (
+                                            <FormattedNumber
+                                                value={15000}
+                                                style="currency"
+                                                currency="RUB"
+                                                numberingSystem="latn"
+                                            />
+                                        ),
+                                    }}
+                                />
                             }
                             price={15000}
-                            description="Получите дополнительный доступ к закрытым дискуссиям, личным встречам с ведущими экспертами"
+                            description={
+                                <FormattedMessage
+                                    id="buyTicketsPage.vipTicketDescription"
+                                    defaultMessage="Получите дополнительный доступ к закрытым дискуссиям, личным встречам с ведущими экспертами"
+                                />
+                            }
                             onChange={setSelectedPrice}
                         />
                     </div>
@@ -62,16 +124,29 @@ export const BuyTicketsPage: NextPage = () => {
 
                 <fieldset className={cx("form__inputs")}>
                     <label className={cx("form__inputs-label")}>
-                        <div className={cx("form__label")}>Имя и фамилия</div>
+                        <div className={cx("form__label")}>
+                            <FormattedMessage
+                                id="buyTicketsPage.name"
+                                defaultMessage="Имя и фамилия"
+                            />
+                        </div>
                         <input
                             className={cx("form__input")}
                             type="text"
-                            placeholder="Введите имя и фамилию"
+                            placeholder={intl.formatMessage({
+                                id: "buyTicketsPage.namePlaceholder",
+                                defaultMessage: "Введите имя и фамилию",
+                            })}
                         />
                     </label>
 
                     <label className={cx("form__inputs-label")}>
-                        <div className={cx("form__label")}>Электронная почта</div>
+                        <div className={cx("form__label")}>
+                            <FormattedMessage
+                                id="buyTicketsPage.email"
+                                defaultMessage="Электронная почта"
+                            />
+                        </div>
                         <input
                             className={cx("form__input")}
                             type="email"
@@ -80,12 +155,22 @@ export const BuyTicketsPage: NextPage = () => {
                     </label>
 
                     <label className={cx("form__inputs-label")}>
-                        <div className={cx("form__label")}>Номер телефона</div>
+                        <div className={cx("form__label")}>
+                            <FormattedMessage
+                                id="buyTicketsPage.phoneNumber"
+                                defaultMessage="Номер телефона"
+                            />
+                        </div>
                         <input className={cx("form__input", "form__input_phone")} type="tel" />
                     </label>
 
                     <div className={cx("form__inputs-label")}>
-                        <div className={cx("form__label")}>Количество билетов</div>
+                        <div className={cx("form__label")}>
+                            <FormattedMessage
+                                id="buyTicketsPage.ticketCount"
+                                defaultMessage="Количество билетов"
+                            />
+                        </div>
                         <div>
                             {[1, 2, 3, 4, 5, 6].map((count) => (
                                 <div className={cx("form__tickets-count")} key={count}>
@@ -105,9 +190,27 @@ export const BuyTicketsPage: NextPage = () => {
                 </fieldset>
 
                 <div className={cx("form__submit")}>
-                    <Button type="button">Оплатить {totalPrice} ₽</Button>
+                    <Button type="button">
+                        <FormattedMessage
+                            id="buyTicketsPage.pay"
+                            defaultMessage="Оплатить {totalPrice}"
+                            values={{
+                                totalPrice: (
+                                    <FormattedNumber
+                                        value={totalPrice}
+                                        style="currency"
+                                        currency="RUB"
+                                        numberingSystem="latn"
+                                    />
+                                ),
+                            }}
+                        />
+                    </Button>
                     <div className={cx("form__submit-description")}>
-                        Нажимая «Оплатить», вы соглашаетесь с условиями приобретения и офертой
+                        <FormattedMessage
+                            id="buyTicketsPage.agreement"
+                            defaultMessage="Нажимая «Оплатить», вы соглашаетесь с условиями приобретения и офертой"
+                        />
                     </div>
                 </div>
             </form>
