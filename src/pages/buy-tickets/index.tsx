@@ -47,7 +47,7 @@ export const BuyTicketsPage: NextPage = () => {
 
                         <Ticket
                             vip
-                            id="ticket-default"
+                            id="ticket-vip"
                             title={
                                 <>
                                     VIP посещение <br /> 15 000,00 ₽
