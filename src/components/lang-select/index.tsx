@@ -54,7 +54,9 @@ export const LangSelect = () => {
                             key={lang}
                             onClick={() => {
                                 handleMenuClose();
-                                router.push(router.asPath, router.asPath, { locale: lang });
+                                router
+                                    .push(router.asPath, router.asPath, { locale: lang })
+                                    .then(() => router.reload());
                             }}
                         >
                             <span className={cx("lang-select__menu-item-text")}>{langName}</span>

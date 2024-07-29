@@ -8,7 +8,7 @@
 }
 
 .navigation__link {
-    margin-left: 45px;
+    margin-inline-start: 45px;
     text-decoration: none;
     font-size: 20px;
     line-height: 20px;

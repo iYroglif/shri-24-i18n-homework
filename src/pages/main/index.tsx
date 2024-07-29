@@ -6,10 +6,12 @@ import { useRouter } from "next/router";
 import map from "public/images/map.jpg";
 import { useCallback, useMemo } from "react";
 import { FormattedDate, FormattedMessage, useIntl } from "react-intl";
+import Locale from "@formatjs/intl-locale";
 
 import { Button } from "@/components/button";
 import { HorizontalDivider } from "@/components/horizontal-divider";
 import { SpeakerCard } from "@/components/speaker-card";
+import { IconWrapper } from "@/components/icon-wrapper";
 import BoxIcon from "@/icons/box.svg";
 import ConfLogoIcon from "@/icons/conf-logo.svg";
 import MagnifyingGlassIcon from "@/icons/magnifying-glass.svg";
@@ -31,6 +33,11 @@ const Main: NextPage = () => {
     const speakersData = useMemo(() => getSpeakersData(intl), [intl]);
 
     const handleBuyTickets = useCallback(() => router.push("/buy-tickets"), [router]);
+
+    const rtl = useMemo(
+        () => new Locale(intl.locale).getTextInfo().direction === "rtl",
+        [intl.locale]
+    );
 
     return (
         <>
@@ -160,6 +167,7 @@ const Main: NextPage = () => {
                                 defaultMessage: "Исследовать новые методологии",
                             }),
                             Icon: MagnifyingGlassIcon,
+                            shouldRtlMigrate: false,
                         },
                         {
                             description: intl.formatMessage({
@@ -168,6 +176,7 @@ const Main: NextPage = () => {
                                     "Рассмотреть актуальные проблемы и поиски путей их решения",
                             }),
                             Icon: MapArrowIcon,
+                            shouldRtlMigrate: true,
                         },
                         {
                             description: intl.formatMessage({
@@ -175,6 +184,7 @@ const Main: NextPage = () => {
                                 defaultMessage: "Получить опыт внедрения инновационных подходов",
                             }),
                             Icon: SatelliteIcon,
+                            shouldRtlMigrate: true,
                         },
                         {
                             description: intl.formatMessage({
@@ -182,10 +192,11 @@ const Main: NextPage = () => {
                                 defaultMessage: "Опробовать полученные знания на практике",
                             }),
                             Icon: BoxIcon,
+                            shouldRtlMigrate: true,
                         },
-                    ].map(({ description, Icon }) => (
+                    ].map(({ description, Icon, shouldRtlMigrate }) => (
                         <div className={cx("opportunities__item")} key={description}>
-                            <Icon />
+                            <IconWrapper Icon={Icon} rtl={rtl && shouldRtlMigrate} />
                             <div className={cx("opportunities__item-description")}>
                                 {description}
                             </div>
