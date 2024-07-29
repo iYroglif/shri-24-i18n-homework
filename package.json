@@ -8,10 +8,11 @@
         "ar"
     ],
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
+        "dev": "npm run split-translations && next dev",
+        "build": "npm run split-translations && next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "split-translations": "node ./split-translations.mjs"
     },
     "dependencies": {
         "@formatjs/intl-locale": "4.0.0",

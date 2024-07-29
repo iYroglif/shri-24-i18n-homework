@@ -17,13 +17,14 @@ import MapArrowIcon from "@/icons/map-arrow.svg";
 import SatelliteIcon from "@/icons/satellite.svg";
 import AltLogoIcon from "@/icons/alt-logo.svg";
 import { CONFERENCE_DATE } from "@/shared/conference-date";
+import { getWithTranslations } from "@/features/i18n";
 
 import { getSpeakersData } from "./constants";
 import styles from "./styles.module.css";
 
 const cx = classNames.bind(styles);
 
-export const MainPage: NextPage = () => {
+const Main: NextPage = () => {
     const router = useRouter();
     const intl = useIntl();
 
@@ -221,3 +222,7 @@ export const MainPage: NextPage = () => {
         </>
     );
 };
+
+export const MainPage = getWithTranslations(
+    async (lang: string) => await import(`./lang/${lang}.json`)
+)(Main);

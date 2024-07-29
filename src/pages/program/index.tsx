@@ -7,13 +7,14 @@ import { FormattedMessage, FormattedTime, useIntl } from "react-intl";
 import { HorizontalDivider } from "@/components/horizontal-divider";
 import { PageHeader } from "@/components/page-header";
 import { CONFERENCE_DATE } from "@/shared/conference-date";
+import { getWithTranslations } from "@/features/i18n";
 
 import { getPresentations } from "./constants";
 import styles from "./styles.module.css";
 
 const cx = classNames.bind(styles);
 
-export const ProgramPage = () => {
+const Program = () => {
     const intl = useIntl();
 
     const presentations = useMemo(() => getPresentations(intl), [intl]);
@@ -84,3 +85,7 @@ export const ProgramPage = () => {
         </>
     );
 };
+
+export const ProgramPage = getWithTranslations(
+    async (lang: string) => await import(`./lang/${lang}.json`)
+)(Program);

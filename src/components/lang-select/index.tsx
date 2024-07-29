@@ -5,6 +5,7 @@ import { useIntl } from "react-intl";
 
 import DoneIcon from "@/icons/done.svg";
 import EarthIcon from "@/icons/earth.svg";
+import { getLanguage } from "@/features/i18n";
 
 import styles from "./styles.module.css";
 import { useClickOutside } from "./use-click-outside";
@@ -32,7 +33,7 @@ export const LangSelect = () => {
 
     const langSelectRef = useClickOutside<HTMLDivElement>(handleMenuClose);
 
-    const selectedLang = locale.split("-")[0];
+    const selectedLang = getLanguage(locale);
 
     return (
         <div className={cx("lang-select")} ref={langSelectRef}>

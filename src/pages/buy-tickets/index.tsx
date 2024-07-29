@@ -9,12 +9,13 @@ import { HorizontalDivider } from "@/components/horizontal-divider";
 import { PageHeader } from "@/components/page-header";
 import { Ticket } from "@/components/ticket";
 import { CONFERENCE_DATE } from "@/shared/conference-date";
+import { getWithTranslations } from "@/features/i18n";
 
 import styles from "./styles.module.css";
 
 const cx = classNames.bind(styles);
 
-export const BuyTicketsPage: NextPage = () => {
+const BuyTickets: NextPage = () => {
     const [selectedPrice, setSelectedPrice] = useState(2500);
     const [ticketCount, setTicketCount] = useState(1);
     const intl = useIntl();
@@ -217,3 +218,7 @@ export const BuyTicketsPage: NextPage = () => {
         </>
     );
 };
+
+export const BuyTicketsPage = getWithTranslations(
+    async (lang: string) => await import(`./lang/${lang}.json`)
+)(BuyTickets);
