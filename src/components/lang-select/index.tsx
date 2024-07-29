@@ -16,6 +16,7 @@ const LANGUAGES: Record<string, string> = {
     ru: "Русский",
     en: "English",
     ar: "اَلْعَرَبِيَّةُ",
+    es: "Español",
 };
 
 export const LangSelect = () => {
