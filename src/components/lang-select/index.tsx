@@ -1,5 +1,7 @@
 import classNames from "classnames/bind";
 import { useCallback, useState } from "react";
+import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
 
 import DoneIcon from "@/icons/done.svg";
 import EarthIcon from "@/icons/earth.svg";
@@ -17,6 +19,8 @@ const LANGUAGES: Record<string, string> = {
 
 export const LangSelect = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const { locale } = useIntl();
+    const router = useRouter();
 
     const handleMenuClose = useCallback(() => {
         setShowMenu(false);
@@ -28,7 +32,7 @@ export const LangSelect = () => {
 
     const langSelectRef = useClickOutside<HTMLDivElement>(handleMenuClose);
 
-    const selectedLang = "ru";
+    const selectedLang = locale.split("-")[0];
 
     return (
         <div className={cx("lang-select")} ref={langSelectRef}>
@@ -47,7 +51,10 @@ export const LangSelect = () => {
                         <li
                             className={cx("lang-select__menu-item")}
                             key={lang}
-                            onClick={handleMenuClose}
+                            onClick={() => {
+                                handleMenuClose();
+                                router.push(router.asPath, router.asPath, { locale: lang });
+                            }}
                         >
                             <span className={cx("lang-select__menu-item-text")}>{langName}</span>
                             {lang === selectedLang && <DoneIcon />}

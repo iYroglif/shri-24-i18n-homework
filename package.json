@@ -2,6 +2,11 @@
     "name": "i18n-l10n-conf",
     "version": "1.0.0",
     "private": true,
+    "supportedLanguages": [
+        "ru",
+        "en",
+        "ar"
+    ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
