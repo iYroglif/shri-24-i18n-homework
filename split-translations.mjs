@@ -1,3 +1,6 @@
+import path from "node:path";
+import fs from "node:fs/promises";
+
 const PAGE_TRANSLATION_KEYS = {
     main: [
         "footer.copyright",
@@ -82,3 +85,39 @@ const PAGE_TRANSLATION_KEYS = {
         "speaker.igorNafenov.title",
     ],
 };
+
+const PAGES = [
+    "src/pages/program/index.tsx",
+    "src/pages/main/index.tsx",
+    "src/pages/buy-tickets/index.tsx",
+];
+
+const {
+    default: { supportedLanguages },
+} = await import("./package.json", {
+    assert: { type: "json" },
+});
+
+const { default: translations } = await import("./translations.json", {
+    assert: { type: "json" },
+});
+
+for (const page of PAGES) {
+    const pageDir = path.dirname(page);
+    const pageName = path.basename(pageDir);
+    const langDir = path.resolve(pageDir, "lang");
+    const translationKeys = PAGE_TRANSLATION_KEYS[pageName];
+
+    await fs.mkdir(langDir, { recursive: true });
+
+    for (const lang of supportedLanguages) {
+        const langFile = path.resolve(langDir, `${lang}.json`);
+        const pageLangTranslations = {};
+
+        for (const key of translationKeys) {
+            pageLangTranslations[key] = translations[key][lang];
+        }
+
+        await fs.writeFile(langFile, JSON.stringify(pageLangTranslations, null, 4), "utf8");
+    }
+}

@@ -1,58 +1,91 @@
 import classNames from "classnames/bind";
 import Head from "next/head";
 import Image from "next/image";
-import { Fragment } from "react";
+import { Fragment, useMemo } from "react";
+import { FormattedMessage, FormattedTime, useIntl } from "react-intl";
 
 import { HorizontalDivider } from "@/components/horizontal-divider";
 import { PageHeader } from "@/components/page-header";
+import { CONFERENCE_DATE } from "@/shared/conference-date";
+import { getWithTranslations } from "@/features/i18n";
 
-import { PRESENTATIONS } from "./constants";
+import { getPresentations } from "./constants";
 import styles from "./styles.module.css";
 
 const cx = classNames.bind(styles);
 
-export const ProgramPage = () => (
-    <>
-        <Head>
-            <title>Программа - I&L–2024</title>
-        </Head>
+const Program = () => {
+    const intl = useIntl();
 
-        <PageHeader title="Программа" />
+    const presentations = useMemo(() => getPresentations(intl), [intl]);
 
-        <section className={cx("program")}>
-            <div className={cx("program__text")}>21:30</div>
-            <div className={cx("program__text", "program__text_registration")}>
-                Регистрация в офлайне
-            </div>
+    return (
+        <>
+            <Head>
+                <title>
+                    {intl.formatMessage<string>(
+                        {
+                            id: "programPage.title",
+                            defaultMessage: "Программа - I&L–{year}",
+                        },
+                        {
+                            year: intl.formatDate(CONFERENCE_DATE, {
+                                year: "numeric",
+                                numberingSystem: "latn",
+                            }),
+                        }
+                    )}
+                </title>
+            </Head>
 
-            <HorizontalDivider className={cx("program__divider")} />
+            <PageHeader
+                title={<FormattedMessage id="programPage.header" defaultMessage="Программа" />}
+            />
 
-            {PRESENTATIONS.map(
-                ({ time, avatar, name, title, presentationTitle, presentationDescription }) => (
-                    <Fragment key={presentationTitle}>
-                        <div className={cx("program__text")}>{time}</div>
+            <section className={cx("program")}>
+                <div className={cx("program__text")}>
+                    <FormattedTime value={new Date(2024, 8, 21, 21, 30)} numberingSystem="latn" />
+                </div>
+                <div className={cx("program__text", "program__text_registration")}>
+                    <FormattedMessage
+                        id="programPage.registration"
+                        defaultMessage="Регистрация в офлайне"
+                    />
+                </div>
 
-                        <div className={cx("program__card")}>
-                            <Image
-                                className={cx("program__card-avatar")}
-                                src={avatar}
-                                height={170}
-                                width={170}
-                                alt={name}
-                            />
-                            <div className={cx("program__card-text")}>{name}</div>
-                            <div className={cx("program__card-text")}>{title}</div>
-                        </div>
+                <HorizontalDivider className={cx("program__divider")} />
 
-                        <div>
-                            <div className={cx("program__text")}>{presentationTitle}</div>
-                            <div className={cx("program__description")}>
-                                {presentationDescription}
+                {presentations.map(
+                    ({ time, avatar, name, title, presentationTitle, presentationDescription }) => (
+                        <Fragment key={presentationTitle}>
+                            <div className={cx("program__text")}>{time}</div>
+
+                            <div className={cx("program__card")}>
+                                <Image
+                                    className={cx("program__card-avatar")}
+                                    src={avatar}
+                                    height={170}
+                                    width={170}
+                                    alt={name}
+                                />
+                                <div className={cx("program__card-text")}>{name}</div>
+                                <div className={cx("program__card-text")}>{title}</div>
                             </div>
-                        </div>
-                    </Fragment>
-                )
-            )}
-        </section>
-    </>
-);
+
+                            <div>
+                                <div className={cx("program__text")}>{presentationTitle}</div>
+                                <div className={cx("program__description")}>
+                                    {presentationDescription}
+                                </div>
+                            </div>
+                        </Fragment>
+                    )
+                )}
+            </section>
+        </>
+    );
+};
+
+export const ProgramPage = getWithTranslations(
+    async (lang: string) => await import(`./lang/${lang}.json`)
+)(Program);

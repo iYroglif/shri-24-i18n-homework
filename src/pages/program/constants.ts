@@ -1,34 +1,72 @@
+import { IntlShape } from "react-intl";
 import evgeniyAntonovAvatar from "public/avatars/evgeniy-antonov.jpg";
 import igorBobrovAvatar from "public/avatars/igor-bobrov.jpg";
 import igorNafenovAvatar from "public/avatars/igor-nafenov.jpg";
 
-export const PRESENTATIONS = [
+export const getPresentations = (intl: IntlShape) => [
     {
-        time: "21:40",
+        time: intl.formatTime(new Date(2024, 8, 21, 21, 40), { numberingSystem: "latn" }),
         avatar: igorBobrovAvatar,
-        name: "Игорь Бобров",
-        title: "CPO Alt IT",
-        presentationTitle:
-            "«Международные вызовы и препятствия при разработке и запуске продуктов»",
-        presentationDescription:
-            "Международные вызовы и препятствия при разработке и запуске продуктов включают культурные различия, локализацию и маркетинговые аспекты",
+        name: intl.formatMessage({
+            id: "speaker.igorBobrov.name",
+            defaultMessage: "Игорь Бобров",
+        }),
+        title: intl.formatMessage({
+            id: "speaker.igorBobrov.title",
+            defaultMessage: "CPO Alt IT",
+        }),
+        presentationTitle: intl.formatMessage({
+            id: "speaker.igorBobrov.presentationTitle",
+            defaultMessage:
+                "«Международные вызовы и препятствия при разработке и запуске продуктов»",
+        }),
+        presentationDescription: intl.formatMessage({
+            id: "speaker.igorBobrov.presentationDescription",
+            defaultMessage:
+                "Международные вызовы и препятствия при разработке и запуске продуктов включают культурные различия, локализацию и маркетинговые аспекты",
+        }),
     },
     {
-        time: "22:00",
+        time: intl.formatTime(new Date(2024, 8, 21, 22, 0), { numberingSystem: "latn" }),
         avatar: evgeniyAntonovAvatar,
-        name: "Евгений Антонов",
-        title: "CTO Alt IT",
-        presentationTitle: "«Адаптация интерфейса под различные культурные и языковые особенности»",
-        presentationDescription:
-            "Адаптация интерфейса под различные культурные и языковые особенности включает в себя изменения, чтобы соответствовать предпочтениям и потребностям пользователей",
+        name: intl.formatMessage({
+            id: "speaker.evgeniyAntonov.name",
+            defaultMessage: "Евгений Антонов",
+        }),
+        title: intl.formatMessage({
+            id: "speaker.evgeniyAntonov.title",
+            defaultMessage: "CTO Alt IT",
+        }),
+        presentationTitle: intl.formatMessage({
+            id: "speaker.evgeniyAntonov.presentationTitle",
+            defaultMessage:
+                "«Адаптация интерфейса под различные культурные и языковые особенности»",
+        }),
+        presentationDescription: intl.formatMessage({
+            id: "speaker.evgeniyAntonov.presentationDescription",
+            defaultMessage:
+                "Адаптация интерфейса под различные культурные и языковые особенности включает в себя изменения, чтобы соответствовать предпочтениям и потребностям пользователей",
+        }),
     },
     {
-        time: "22:45",
+        time: intl.formatTime(new Date(2024, 8, 21, 22, 45), { numberingSystem: "latn" }),
         avatar: igorNafenovAvatar,
-        name: "Игорь Нафенов",
-        title: "Technical Cluster Lead Alt IT",
-        presentationTitle: "«Процессы разработки с учетом интернационализации и локализации»",
-        presentationDescription:
-            "Интеграция процессов интернационализации и локализации в цикл разработки помогает снизить риски, улучшить качество продукта и повысить его конкурентоспособность",
+        name: intl.formatMessage({
+            id: "speaker.igorNafenov.name",
+            defaultMessage: "Игорь Нафенов",
+        }),
+        title: intl.formatMessage({
+            id: "speaker.igorNafenov.title",
+            defaultMessage: "Technical Cluster Lead Alt IT",
+        }),
+        presentationTitle: intl.formatMessage({
+            id: "speaker.igorNafenov.presentationTitle",
+            defaultMessage: "«Процессы разработки с учетом интернационализации и локализации»",
+        }),
+        presentationDescription: intl.formatMessage({
+            id: "speaker.igorNafenov.presentationDescription",
+            defaultMessage:
+                "Интеграция процессов интернационализации и локализации в цикл разработки помогает снизить риски, улучшить качество продукта и повысить его конкурентоспособность",
+        }),
     },
 ];

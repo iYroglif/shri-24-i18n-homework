@@ -1,3 +1,9 @@
+const {
+    default: { supportedLanguages },
+} = await import("./package.json", {
+    assert: { type: "json" },
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
@@ -7,6 +13,11 @@ const nextConfig = {
             use: ["@svgr/webpack"],
         });
         return config;
+    },
+    i18n: {
+        locales: ["default", ...supportedLanguages],
+        defaultLocale: "default",
+        localeDetection: false,
     },
 };
 
