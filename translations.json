@@ -2,276 +2,331 @@
     "header.buyTickets": {
         "ru": "Купить билеты",
         "en": "Buy Tickets",
-        "ar": "شراء التذاكر"
+        "ar": "شراء التذاكر",
+        "es": "Comprar Entradas"
     },
     "header.main": {
         "ru": "Главная",
         "en": "Home",
-        "ar": "الرئيسية"
+        "ar": "الرئيسية",
+        "es": "Inicio"
     },
     "header.program": {
         "ru": "Программа",
         "en": "Program",
-        "ar": "البرنامج"
+        "ar": "البرنامج",
+        "es": "Programa"
     },
     "footer.copyright": {
         "ru": "© {yearStart}–{yearEnd}, ООО «<link>{brand}</link>»",
         "en": "© {yearStart}–{yearEnd}, LLC «<link>{brand}</link>»",
-        "ar": "© {yearStart}–{yearEnd}، شركة محدودة «<link>{brand}</link>»"
+        "ar": "© {yearStart}–{yearEnd}، شركة محدودة «<link>{brand}</link>»",
+        "es": "© {yearStart}–{yearEnd}, LLC «<link>{brand}</link>»"
     },
     "footer.errorReport": {
         "ru": "Если вы нашли ошибку, пожалуйста, <link>сообщите нам</link>",
         "en": "If you found an error, please <link>report it to us</link>",
-        "ar": "إذا وجدت خطأ، يرجى <link>الإبلاغ عنه لنا</link>"
+        "ar": "إذا وجدت خطأ، يرجى <link>الإبلاغ عنه لنا</link>",
+        "es": "Si encontró un error, por favor <link>repórtelo a nosotros</link>"
     },
     "footer.license": {
         "ru": "Все материалы доступны по лицензии <link1>CC BY-NC 3.0</link1> с обязательным указанием © ООО «<link2>{brand}</link2>»",
         "en": "All materials are available under the <link1>CC BY-NC 3.0</link1> license with mandatory attribution © LLC «<link2>{brand}</link2>»",
-        "ar": "جميع المواد متاحة بموجب رخصة <link1>CC BY-NC 3.0</link1> مع الإشارة الإلزامية © شركة محدودة «<link2>{brand}</link2>»"
+        "ar": "جميع المواد متاحة بموجب رخصة <link1>CC BY-NC 3.0</link1> مع الإشارة الإلزامية © شركة محدودة «<link2>{brand}</link2>»",
+        "es": "Todos los materiales están disponibles bajo la licencia <link1>CC BY-NC 3.0</link1> con atribución obligatoria © LLC «<link2>{brand}</link2>»"
     },
     "footer.subscribe": {
         "ru": "Подпишитесь",
         "en": "Subscribe",
-        "ar": "الاشتراك"
+        "ar": "الاشتراك",
+        "es": "Suscribirse"
     },
     "pageHeader.subtitle": {
         "ru": "I&L–{year}",
         "en": "I&L–{year}",
-        "ar": "I&L–{year}"
+        "ar": "I&L–{year}",
+        "es": "I&L–{year}"
     },
     "mainPage.buyTickets": {
         "ru": "Купить билеты",
         "en": "Buy Tickets",
-        "ar": "شراء التذاكر"
+        "ar": "شراء التذاكر",
+        "es": "Comprar Entradas"
     },
     "mainPage.header.title1": {
         "ru": "Интернационализация",
         "en": "Internationalization",
-        "ar": "التدويل"
+        "ar": "التدويل",
+        "es": "Internacionalización"
     },
     "mainPage.header.title2": {
         "ru": "Локализация",
         "en": "Localization",
-        "ar": "التعريب"
+        "ar": "التعريب",
+        "es": "Localización"
     },
     "mainPage.opportunities.innovations": {
         "ru": "Получить опыт внедрения инновационных подходов",
         "en": "Gain experience in implementing innovative approaches",
-        "ar": "اكتساب خبرة في تنفيذ الأساليب المبتكرة"
+        "ar": "اكتساب خبرة في تنفيذ الأساليب المبتكرة",
+        "es": "Adquirir experiencia en la implementación de enfoques innovadores"
     },
     "mainPage.opportunities.methodologies": {
         "ru": "Исследовать новые методологии",
         "en": "Explore new methodologies",
-        "ar": "استكشاف منهجيات جديدة"
+        "ar": "استكشاف منهجيات جديدة",
+        "es": "Explorar nuevas metodologías"
     },
     "mainPage.opportunities.practice": {
         "ru": "Опробовать полученные знания на практике",
         "en": "Apply the acquired knowledge in practice",
-        "ar": "تطبيق المعرفة المكتسبة عمليًا"
+        "ar": "تطبيق المعرفة المكتسبة عمليًا",
+        "es": "Aplicar el conocimiento adquirido en la práctica"
     },
     "mainPage.opportunities.problems": {
         "ru": "Рассмотреть актуальные проблемы и поиски путей их решения",
         "en": "Consider current issues and seek solutions",
-        "ar": "النظر في القضايا الحالية والبحث عن حلول"
+        "ar": "النظر في القضايا الحالية والبحث عن حلول",
+        "es": "Considerar los problemas actuales y buscar soluciones"
     },
     "mainPage.opportunities.title": {
         "ru": "Это отличная возможность, чтобы:",
         "en": "This is a great opportunity to:",
-        "ar": "هذه فرصة رائعة لـ:"
+        "ar": "هذه فرصة رائعة لـ:",
+        "es": "Esta es una gran oportunidad para:"
     },
     "mainPage.section.description": {
         "ru": "Мы рады приветствовать вас на нашей конференции, где вы сможете поделиться своим опытом, узнать о последних тенденциях и лучших практиках в области интернационализации и локализации",
         "en": "We are pleased to welcome you to our conference, where you can share your experience, learn about the latest trends, and best practices in the field of internationalization and localization",
-        "ar": "يسعدنا أن نرحب بكم في مؤتمرنا، حيث يمكنكم مشاركة تجربتكم، والتعرف على أحدث الاتجاهات وأفضل الممارسات في مجال التدويل والتعريب"
+        "ar": "يسعدنا أن نرحب بكم في مؤتمرنا، حيث يمكنكم مشاركة تجربتكم، والتعرف على أحدث الاتجاهات وأفضل الممارسات في مجال التدويل والتعريب",
+        "es": "Nos complace darle la bienvenida a nuestra conferencia, donde puede compartir su experiencia, aprender sobre las últimas tendencias y mejores prácticas en el campo de la internacionalización y localización"
     },
     "mainPage.section.title": {
         "ru": "<accent>I&L–{year}</accent> — {br} международная конференция по интернационализации и локализации для профессионалов в IT",
         "en": "<accent>I&L–{year}</accent> — {br} an international conference on internationalization and localization for IT professionals",
-        "ar": "<accent>I&L–{year}</accent> — {br} مؤتمر دولي حول التدويل والتعريب لمحترفي تكنولوجيا المعلومات"
+        "ar": "<accent>I&L–{year}</accent> — {br} مؤتمر دولي حول التدويل والتعريب لمحترفي تكنولوجيا المعلومات",
+        "es": "<accent>I&L–{year}</accent> — {br} una conferencia internacional sobre internacionalización y localización para profesionales de IT"
     },
     "mainPage.speakers.title": {
         "ru": "Спикеры",
         "en": "Speakers",
-        "ar": "المتحدثون"
+        "ar": "المتحدثون",
+        "es": "Ponentes"
     },
     "mainPage.title": {
         "ru": "Международная конференция по интернационализации и локализации - I&L–{year}",
         "en": "International Conference on Internationalization and Localization - I&L–{year}",
-        "ar": "المؤتمر الدولي حول التدويل والتعريب - I&L–{year}"
+        "ar": "المؤتمر الدولي حول التدويل والتعريب - I&L–{year}",
+        "es": "Conferencia Internacional sobre Internacionalización y Localización - I&L–{year}"
     },
     "mainPage.venue.address": {
         "ru": "Собираемся в офисе наших друзей: {br} Россия, Москва, улица Льва Толстого, 16",
         "en": "We are gathering at our friends' office: {br} Russia, Moscow, Leo Tolstoy Street, 16",
-        "ar": "نجتمع في مكتبنا: {br} روسيا، موسكو، شارع ليو تولستوي، 16"
+        "ar": "نجتمع في مكتبنا: {br} روسيا، موسكو، شارع ليو تولستوي، 16",
+        "es": "Nos reunimos en la oficina de nuestros amigos: {br} Rusia, Moscú, Calle Leo Tolstoy, 16"
     },
     "mainPage.venue.mapAlt": {
         "ru": "Карта с обозначением места проведения",
         "en": "Map showing the venue",
-        "ar": "خريطة تظهر مكان انعقاد المؤتمر"
+        "ar": "خريطة تظهر مكان انعقاد المؤتمر",
+        "es": "Mapa que muestra el lugar del evento"
     },
     "mainPage.venue.title": {
         "ru": "Место проведения",
         "en": "Venue",
-        "ar": "مكان انعقاد المؤتمر"
+        "ar": "مكان انعقاد المؤتمر",
+        "es": "Lugar del evento"
     },
     "buyTicketsPage.agreement": {
         "ru": "Нажимая «Оплатить», вы соглашаетесь с условиями приобретения и офертой",
         "en": "By clicking 'Pay', you agree to the purchase terms and offer",
-        "ar": "بالنقر فوق 'الدفع'، فإنك توافق على شروط الشراء والعرض"
+        "ar": "بالنقر فوق 'الدفع'، فإنك توافق على شروط الشراء والعرض",
+        "es": "Al hacer clic en 'Pagar', usted acepta los términos y la oferta de compra"
     },
     "buyTicketsPage.buyTickets": {
         "ru": "Купить билеты",
         "en": "Buy Tickets",
-        "ar": "شراء التذاكر"
+        "ar": "شراء التذاكر",
+        "es": "Comprar Entradas"
     },
     "buyTicketsPage.chooseTicketType": {
         "ru": "Выберите тип билета",
         "en": "Choose Ticket Type",
-        "ar": "اختر نوع التذكرة"
+        "ar": "اختر نوع التذكرة",
+        "es": "Elija el tipo de entrada"
     },
     "buyTicketsPage.defaultTicket": {
         "ru": "Входной билет {br} {price}",
         "en": "Entry Ticket {br} {price}",
-        "ar": "تذكرة الدخول {br} {price}"
+        "ar": "تذكرة الدخول {br} {price}",
+        "es": "Entrada {br} {price}"
     },
     "buyTicketsPage.defaultTicketDescription": {
         "ru": "Простой входной билет предоставляет доступ на мероприятие и является вашим пропуском на конференцию",
         "en": "The basic entry ticket provides access to the event and is your pass to the conference",
-        "ar": "توفر التذكرة الأساسية للدخول إمكانية الوصول إلى الحدث وهي تمرينك إلى المؤتمر"
+        "ar": "توفر التذكرة الأساسية للدخول إمكانية الوصول إلى الحدث وهي تمرينك إلى المؤتمر",
+        "es": "La entrada básica proporciona acceso al evento y es tu pase para la conferencia"
     },
     "buyTicketsPage.email": {
         "ru": "Электронная почта",
         "en": "Email",
-        "ar": "البريد الإلكتروني"
+        "ar": "البريد الإلكتروني",
+        "es": "Correo Electrónico"
     },
     "buyTicketsPage.name": {
         "ru": "Имя и фамилия",
         "en": "Full Name",
-        "ar": "الاسم الكامل"
+        "ar": "الاسم الكامل",
+        "es": "Nombre Completo"
     },
     "buyTicketsPage.namePlaceholder": {
         "ru": "Введите имя и фамилию",
         "en": "Enter full name",
-        "ar": "أدخل الاسم الكامل"
+        "ar": "أدخل الاسم الكامل",
+        "es": "Ingrese nombre completo"
     },
     "buyTicketsPage.pay": {
         "ru": "Оплатить {totalPrice}",
         "en": "Pay {totalPrice}",
-        "ar": "ادفع {totalPrice}"
+        "ar": "ادفع {totalPrice}",
+        "es": "Pagar {totalPrice}"
     },
     "buyTicketsPage.phoneNumber": {
         "ru": "Номер телефона",
         "en": "Phone Number",
-        "ar": "رقم الهاتف"
+        "ar": "رقم الهاتف",
+        "es": "Número de Teléfono"
     },
     "buyTicketsPage.ticketCount": {
         "ru": "Количество билетов",
         "en": "Number of Tickets",
-        "ar": "عدد التذاكر"
+        "ar": "عدد التذاكر",
+        "es": "Cantidad de Entradas"
     },
     "buyTicketsPage.title": {
         "ru": "Купить билеты - I&L–{year}",
         "en": "Buy Tickets - I&L–{year}",
-        "ar": "شراء التذاكر - I&L–{year}"
+        "ar": "شراء التذاكر - I&L–{year}",
+        "es": "Comprar Entradas - I&L–{year}"
     },
     "buyTicketsPage.vipTicket": {
         "ru": "VIP посещение {br} {price}",
         "en": "VIP Pass {br} {price}",
-        "ar": "تذكرة VIP {br} {price}"
+        "ar": "تذكرة VIP {br} {price}",
+        "es": "Pase VIP {br} {price}"
     },
     "buyTicketsPage.vipTicketDescription": {
         "ru": "Получите дополнительный доступ к закрытым дискуссиям, личным встречам с ведущими экспертами",
         "en": "Get additional access to closed discussions, personal meetings with leading experts",
-        "ar": "احصل على وصول إضافي إلى المناقشات المغلقة، والاجتماعات الشخصية مع الخبراء الرائدين"
+        "ar": "احصل على وصول إضافي إلى المناقشات المغلقة، والاجتماعات الشخصية مع الخبراء الرائدين",
+        "es": "Obtenga acceso adicional a discusiones cerradas, reuniones personales con expertos líderes"
     },
     "programPage.header": {
         "ru": "Программа",
         "en": "Program",
-        "ar": "البرنامج"
+        "ar": "البرنامج",
+        "es": "Programa"
     },
     "programPage.registration": {
         "ru": "Регистрация в офлайне",
         "en": "Offline Registration",
-        "ar": "التسجيل في الموقع"
+        "ar": "التسجيل في الموقع",
+        "es": "Registro Offline"
     },
     "programPage.title": {
         "ru": "Программа - I&L–{year}",
         "en": "Program - I&L–{year}",
-        "ar": "البرنامج - I&L–{year}"
+        "ar": "البرنامج - I&L–{year}",
+        "es": "Programa - I&L–{year}"
     },
     "speaker.evgeniyAntonov.description": {
         "ru": "Присоединился к Alt после окончания университета в {year} году. Он был частью команды разработки, которая изучала инновационные методы локализации интерфейсов для различных культур",
         "en": "Joined Alt after graduating from university in {year}. He was part of the development team that researched innovative methods for localizing interfaces for different cultures",
-        "ar": "انضم إلى Alt بعد تخرجه من الجامعة في عام {year}. كان جزءًا من فريق التطوير الذي بحث في أساليب مبتكرة لتعريب الواجهات لمختلف الثقافات"
+        "ar": "انضم إلى Alt بعد تخرجه من الجامعة في عام {year}. كان جزءًا من فريق التطوير الذي بحث في أساليب مبتكرة لتعريب الواجهات لمختلف الثقافات",
+        "es": "Se unió a Alt después de graduarse de la universidad en {year}. Formó parte del equipo de desarrollo que investigó métodos innovadores para localizar interfaces para diferentes culturas"
     },
     "speaker.evgeniyAntonov.name": {
         "ru": "Евгений Антонов",
         "en": "Evgeniy Antonov",
-        "ar": "يفغيني أنطونوف"
+        "ar": "يفغيني أنطونوف",
+        "es": "Evgeniy Antonov"
     },
     "speaker.evgeniyAntonov.title": {
         "ru": "CTO Alt IT",
         "en": "CTO Alt IT",
-        "ar": "المدير التقني Alt IT"
+        "ar": "المدير التقني Alt IT",
+        "es": "CTO Alt IT"
     },
     "speaker.evgeniyAntonov.presentationDescription": {
         "ru": "Адаптация интерфейса под различные культурные и языковые особенности включает в себя изменения, чтобы соответствовать предпочтениям и потребностям пользователей",
         "en": "Interface adaptation to various cultural and linguistic features involves changes to meet users' preferences and needs",
-        "ar": "تكييف الواجهة مع الميزات الثقافية واللغوية المختلفة يتضمن تغييرات لتلبية تفضيلات واحتياجات المستخدمين"
+        "ar": "تكييف الواجهة مع الميزات الثقافية واللغوية المختلفة يتضمن تغييرات لتلبية تفضيلات واحتياجات المستخدمين",
+        "es": "La adaptación de la interfaz a diversas características culturales y lingüísticas implica cambios para satisfacer las preferencias y necesidades de los usuarios"
     },
     "speaker.evgeniyAntonov.presentationTitle": {
         "ru": "«Адаптация интерфейса под различные культурные и языковые особенности»",
         "en": "«Interface Adaptation to Various Cultural and Linguistic Features»",
-        "ar": "«تكييف الواجهة مع الميزات الثقافية واللغوية المختلفة»"
+        "ar": "«تكييف الواجهة مع الميزات الثقافية واللغوية المختلفة»",
+        "es": "«Adaptación de la Interfaz a Diversas Características Culturales y Lingüísticas»"
     },
     "speaker.igorBobrov.description": {
         "ru": "Присоединился к Alt в {year} году после окончания университета. Начал свою карьеру с разработки программного обеспечения и за несколько лет продвинулся от стажера до CPO",
         "en": "Joined Alt in {year} after graduating from university. He started his career in software development and within a few years progressed from intern to CPO",
-        "ar": "انضم إلى Alt في عام {year} بعد تخرجه من الجامعة. بدأ مسيرته المهنية في تطوير البرمجيات وفي غضون سنوات قليلة تقدم من متدرب إلى رئيس المنتجات"
+        "ar": "انضم إلى Alt في عام {year} بعد تخرجه من الجامعة. بدأ مسيرته المهنية في تطوير البرمجيات وفي غضون سنوات قليلة تقدم من متدرب إلى رئيس المنتجات",
+        "es": "Se unió a Alt en {year} después de graduarse de la universidad. Comenzó su carrera en desarrollo de software y en pocos años progresó de becario a CPO"
     },
     "speaker.igorBobrov.name": {
         "ru": "Игорь Бобров",
         "en": "Igor Bobrov",
-        "ar": "إيغور بوبروف"
+        "ar": "إيغور بوبروف",
+        "es": "Igor Bobrov"
     },
     "speaker.igorBobrov.title": {
         "ru": "CPO Alt IT",
         "en": "CPO Alt IT",
-        "ar": "رئيس المنتجات Alt IT"
+        "ar": "رئيس المنتجات Alt IT",
+        "es": "CPO Alt IT"
     },
     "speaker.igorBobrov.presentationDescription": {
         "ru": "Международные вызовы и препятствия при разработке и запуске продуктов включают культурные различия, локализацию и маркетинговые аспекты",
         "en": "International challenges and obstacles in product development and launch include cultural differences, localization, and marketing aspects",
-        "ar": "تشمل التحديات والعقبات الدولية في تطوير المنتجات وإطلاقها الاختلافات الثقافية والتعريب والجوانب التسويقية"
+        "ar": "تشمل التحديات والعقبات الدولية في تطوير المنتجات وإطلاقها الاختلافات الثقافية والتعريب والجوانب التسويقية",
+        "es": "Los desafíos y obstáculos internacionales en el desarrollo y lanzamiento de productos incluyen diferencias culturales, localización y aspectos de marketing"
     },
     "speaker.igorBobrov.presentationTitle": {
         "ru": "«Международные вызовы и препятствия при разработке и запуске продуктов»",
         "en": "«International Challenges and Obstacles in Product Development and Launch»",
-        "ar": "«التحديات والعقبات الدولية في تطوير وإطلاق المنتجات»"
+        "ar": "«التحديات والعقبات الدولية في تطوير وإطلاق المنتجات»",
+        "es": "«Desafíos y Obstáculos Internacionales en el Desarrollo y Lanzamiento de Productos»"
     },
     "speaker.igorNafenov.description": {
         "ru": "Присоединился к Alt в {year} году как старший разработчик. Провел исследования в области интернационализации веб-сайтов, что способствовало успешной адаптации продуктов к различным языкам и культурам",
         "en": "Joined Alt in {year} as a senior developer. Conducted research on website internationalization, contributing to the successful adaptation of products to various languages and cultures",
-        "ar": "انضم إلى Alt في عام {year} كمطور رئيسي. أجرى أبحاثًا حول تدويل المواقع الإلكترونية، مما ساهم في التكيف الناجح للمنتجات مع مختلف اللغات والثقافات"
+        "ar": "انضم إلى Alt في عام {year} كمطور رئيسي. أجرى أبحاثًا حول تدويل المواقع الإلكترونية، مما ساهم في التكيف الناجح للمنتجات مع مختلف اللغات والثقافات",
+        "es": "Se unió a Alt en {year} como desarrollador senior. Realizó investigaciones sobre la internacionalización de sitios web, contribuyendo a la adaptación exitosa de productos a varios idiomas y culturas"
     },
     "speaker.igorNafenov.name": {
         "ru": "Игорь Нафенов",
         "en": "Igor Nafenov",
-        "ar": "إيغور نافينوف"
+        "ar": "إيغور نافينوف",
+        "es": "Igor Nafenov"
     },
     "speaker.igorNafenov.title": {
         "ru": "Technical Cluster Lead Alt IT",
         "en": "Technical Cluster Lead Alt IT",
-        "ar": "قائد المجموعة التقنية Alt IT"
+        "ar": "قائد المجموعة التقنية Alt IT",
+        "es": "Líder del Clúster Técnico Alt IT"
     },
     "speaker.igorNafenov.presentationDescription": {
         "ru": "Интеграция процессов интернационализации и локализации в цикл разработки помогает снизить риски, улучшить качество продукта и повысить его конкурентоспособность",
         "en": "Integrating internationalization and localization processes into the development cycle helps reduce risks, improve product quality, and enhance its competitiveness",
-        "ar": "يساعد دمج عمليات التدويل والتعريب في دورة التطوير على تقليل المخاطر، وتحسين جودة المنتج، وزيادة تنافسيته"
+        "ar": "يساعد دمج عمليات التدويل والتعريب في دورة التطوير على تقليل المخاطر، وتحسين جودة المنتج، وزيادة تنافسيته",
+        "es": "Integrar los procesos de internacionalización y localización en el ciclo de desarrollo ayuda a reducir riesgos, mejorar la calidad del producto y aumentar su competitividad"
     },
     "speaker.igorNafenov.presentationTitle": {
         "ru": "«Процессы разработки с учетом интернационализации и локализации»",
         "en": "«Development Processes Considering Internationalization and Localization»",
-        "ar": "«عمليات التطوير مع مراعاة التدويل والتعريب»"
+        "ar": "«عمليات التطوير مع مراعاة التدويل والتعريب»",
+        "es": "«Procesos de Desarrollo Considerando la Internacionalización y Localización»"
     }
 }

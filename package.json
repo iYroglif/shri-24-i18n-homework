@@ -5,7 +5,8 @@
     "supportedLanguages": [
         "ru",
         "en",
-        "ar"
+        "ar",
+        "es"
     ],
     "scripts": {
         "dev": "npm run split-translations && next dev",
